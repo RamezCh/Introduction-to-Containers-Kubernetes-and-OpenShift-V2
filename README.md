@@ -47,7 +47,7 @@ Course Syllabus
 
 ### Module 3: Managing Applications with Kubernetes
 
- -Using ReplicaSets
+- Using ReplicaSets
 - Using Autoscaling
 - Understanding Rolling Updates
 - Understanding ConfigMaps and Secrets
@@ -115,3 +115,4 @@ Common Docker commands:
 
 Docker is a container runtime, a software that executes containers.
 
+Hardware-> OS-> Container Runtime-> Applications (App1, App2, App3...)
