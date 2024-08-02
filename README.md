@@ -218,3 +218,34 @@ Kubernetes is not / does not:
 - prescribe logging, monitoring, or alerting solutions
 - provide built-in middleware, databases, or other services
 
+### Kubernetes Architecture
+A deployment of Kubernetes is called a Cluster
+
+kube-api-server exposes Kubernetes API. All communication in the cluster utilizes this API.
+
+etcd. Highly available key-value store. Contains all cluster data. Source of truth for the state in a kubernetes cluster.
+
+kube-scheduler. Assigns newly created Pods to nodes. Determines where workloads should run within the Cluster.
+
+kube-controller manager runs all the controller processes that monitor clustor state and makes sure it matches desired state
+
+cloud-controller manager runs controllers that interact with underlying cloud providers. Links clusters into a cloud provider's API
+
+Nodes are worker machines in Kubernetes. User applications are run on Nodes. They can be Virtual or Physical Machine. Managed by Control Plane. They aren't kubernetes but by the provider. Contains necessary services to run application
+
+Kubelet communicates with API server, ensures POD and their associated containers are running. Reports to the control plane on health and status.
+
+Container runtime downloads images and runs containers, kubernetes implements an interface so that this component is pluggable, docker is a well-known runtime.
+
+Kubernetes proxy is a network proxy that runs on each node and a cluster. It contains network rules that allow communication to Pods. This communication can come in or outside the cluster.
+
+What is a control loop?
+
+Non-terminating loop that regulates the state of a system, for example a thermostat that maintains the desired temperature in the room.
+
+Controllers:
+- Monitor state of a cluster
+- Take action to ensure the actual state matches the desired state
+- Communicate with the API server to initiate these actions
+- Track Kubernetes objects and ensure that the desired state is achieved
+
