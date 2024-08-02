@@ -161,3 +161,37 @@ Image naming: hostname/repository:tag
 
 Tag is a version number or OS built on.
 
+### Running Containers
+FROM node:9.4.0-alpine
+
+COPY app.js
+
+COPY package.json .
+
+RUN npm install &&\ apk update &&\ apk upgrade
+
+CMD node app.js
+
+docker build -t my-app:v1 .
+- -t indicates tag option, name we want to give to the image
+- repository name: my-app
+- tag is version, v1
+- . at end means current working directory ( we can also write a full path to the build Context )
+
+docker images
+- Shows my-app image (repo, tag, image id, created, size)
+
+docker tag my-app:v1 second-app:v1
+- it takes first image we want to tag, my-app:v1
+- it takes second image we want to apply second-app:v1
+- Once we run it, we see 2 images diff repo but same image ID
+
+docker images
+
+docker run my-app:v1
+- Hello, world!
+
+docker push my-app:v1
+
+If we go on Dockerhub, we can view the image.
+
