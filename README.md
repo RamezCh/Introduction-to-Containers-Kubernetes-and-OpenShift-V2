@@ -195,3 +195,26 @@ docker push my-app:v1
 
 If we go on Dockerhub, we can view the image.
 
+## Module 2
+
+### Container Orchestration
+- Provisioning and deployment
+- Availability
+- Scaling
+- Scheduling to infrastructure
+- Rolling updates
+- Health checks
+
+Kubernetes is:
+- open source, various companies and people contribute to it and the code can be found out online.
+- Container Orchestration Platform & Facilitates declarative management
+- Possesses a Growing Ecosystem
+- Widely Available
+
+Kubernetes is not / does not:
+- traditional, all-inclusive platform as a service (PaaS)
+- limit the types of applications
+- deploy source code or build applications
+- prescribe logging, monitoring, or alerting solutions
+- provide built-in middleware, databases, or other services
+
