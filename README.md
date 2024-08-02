@@ -24,3 +24,42 @@ After completing this course you will be able to:
 - Manage applications with Kubernetes
 - Use ReplicaSets, auto-scaling, rolling updates and service bindings
 - Understand the benefits of OpenShift, Istio and other important tools
+
+## Syllabus
+Course Syllabus
+
+### Module 1: Understanding the Benefits of Containers 
+
+- Introduction to Containers
+- Introduction to Docker
+- Building Container Images
+- Using Container Registries
+- Running Containers
+
+### Module 2: Understanding Kubernetes Architecture
+
+- Understanding Container Orchestration
+- Understanding Kubernetes Architecture
+- Introduction to Kubernetes Objects
+- Using Basic Kubernetes Objects
+- Using the kubectl command
+- Leveraging Kubernetes
+
+### Module 3: Managing Applications with Kubernetes
+
+ -Using ReplicaSets
+- Using Autoscaling
+- Understanding Rolling Updates
+- Understanding ConfigMaps and Secrets
+- Using Service Bindings
+
+### Module 4 - The Kubernetes Ecosystem
+
+- The Kubernetes Ecosystem
+- Introduction to Red Hat OpenShift
+- Red Hat OpenShift and Kubernetes
+- Builds
+- Operators
+- Istio
+
+### Final Exam
