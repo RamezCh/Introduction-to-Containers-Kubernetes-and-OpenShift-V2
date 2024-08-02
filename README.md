@@ -63,6 +63,8 @@ Course Syllabus
 - Istio
 
 ## Module 1
+
+### What are Containers?
 A container is an executable unit of software. Basically, what your program needs to run packed in one place so it can be executed anywhere.
 
 Imagine old shipping methods. Too much wasted space. Look at modern shipping methods. Neat and clean. This is the idea of containers.
@@ -85,3 +87,31 @@ Use cases for containers:
 - DevOps (build, ship and run software)
 - Hybird, multi-cloud (run consistently across environments)
 - Application modernizing and migration
+
+### Intro to Docker
+Docker is a software platform for building and running containers.
+
+Docker image and Docker container are used interchangeable for image and container.
+
+One of the most used Docker tools is Docker CLI.
+
+Common Docker commands:
+1. docker build
+  - Creates container images
+  - Requires a Dockerfile
+  - Tags, or names, iamges
+2. docker tag
+  - Names Images
+  - Doesn't overwrite existing Images
+  - Creates a new Tag that points to images
+3. Docker images
+  - Lists all images (repo, tags, size)
+4. Docker run
+  - Runs a container
+  - Suited for testing images
+5. Docker push
+6. Docker pull
+  - Used for storing images in a remote location and then retrieving those images
+
+Docker is a container runtime, a software that executes containers.
+
