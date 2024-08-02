@@ -116,3 +116,16 @@ Common Docker commands:
 Docker is a container runtime, a software that executes containers.
 
 Hardware-> OS-> Container Runtime-> Applications (App1, App2, App3...)
+
+### Building Container Image
+Dockerfile -> Image -> Container
+
+A dockerfile is the blueprint for an image, outlines steps to build the image.
+
+An Image is an immutable file that contains the source code, libraries, and dependencies for an application to run. In a sense a template or blue print for containers. A snapshot of a container. (READ-ONLY file)
+
+A Container is an running Image. A write layer is written on top of Image to enable containers to execute.
+
+A Dockerfile is a text file that contains all instructions/commands to create the Image
+
+Images are built layer by layer with each Instruction building an Image layer.
