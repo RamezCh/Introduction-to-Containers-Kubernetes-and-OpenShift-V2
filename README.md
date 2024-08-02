@@ -150,6 +150,14 @@ RUN make /app
 
 CMD python/app/app.py
 
+### Container Registry
+Is the location where container images are stored and retrieved. Registries can be public or private. Most enterprises use a private registry.
 
+Can be HOSTED or SELF-HOSTED. HOSTED are deployed by creator for example IBM CLOUD, we don't need to deploy the image, just use it.
 
-CMD 
+When storing an Image in a Registry we say PUSH. When we install an Image from the Registry we use PULL.
+
+Image naming: hostname/repository:tag
+
+Tag is a version number or OS built on.
+
