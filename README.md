@@ -129,3 +129,27 @@ A Container is an running Image. A write layer is written on top of Image to ena
 A Dockerfile is a text file that contains all instructions/commands to create the Image
 
 Images are built layer by layer with each Instruction building an Image layer.
+
+Dockerfiles start with FROM instruction. FROM instruction contains/defines base image. The start point for the rest of the Image.
+
+The RUN instruction executes commands.
+
+The ENV command allows you to set environment variables.
+
+ADD and COPY commands allow you to Copy files and directories. COPY only for localfiles and directories. ADD can add files from remote URL
+
+CMD can only be used once and it provides default command for container execution
+
+DockerFile example:
+
+FROM ubuntu:18.04
+
+COPY ./app
+
+RUN make /app
+
+CMD python/app/app.py
+
+
+
+CMD 
