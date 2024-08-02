@@ -63,3 +63,17 @@ Course Syllabus
 - Istio
 
 ### Final Exam
+
+## Grading Scheme
+GRADING SCHEME
+
+This section contains information for those earning a certificate. Those auditing the course can skip this section and click next.
+
+1. The course contains 4 Graded Quizzes (1 per module) and 1 Final Exam. Each Graded Quiz carries an equal weight totaling 50% of the final grade, and the final Exam carries a weight of 50% of the final grade.
+2. The minimum passing mark for the course is 70%.
+3. Permitted attempts are per question:
+- One attempt - For True/False questions
+- Two attempts - For any question other than True/False
+4. There are no penalties for incorrect attempts.
+5. Clicking the "Submit" button when it appears, means your submission is FINAL.  You will NOT be able to resubmit your answer for that question again.
+6. Check your grades in the course at any time by clicking on the "Progress" tab.
