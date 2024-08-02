@@ -12,3 +12,15 @@ This course is of interest to anyone who wants to be a cloud practitioner and wh
 ### Pre-requisite
 
 We have created this course so that anyone with a basic understanding of cloud computing will be able to learn about Containers and Kubernetes. 
+
+## Learning Objectives
+After completing this course you will be able to:
+
+- Understand the benefits of containers
+- Build and run a container image
+- Understand Kubernetes architecture
+- Write a YAML deployment file
+- Expose deployment as a service
+- Manage applications with Kubernetes
+- Use ReplicaSets, auto-scaling, rolling updates and service bindings
+- Understand the benefits of OpenShift, Istio and other important tools
