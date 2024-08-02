@@ -70,6 +70,16 @@ Imagine old shipping methods. Too much wasted space. Look at modern shipping met
 - Light weight
 - Fast
 
+Virtual machine is an emulation of a physical computer. VMs enable teams to run what appear to be multiple machines, with multiple operating systems, on a single computer. VMs interact with physical computers by using lightweight software layers called hypervisors. Hypervisors can separate VMs from one another and allocate processors, memory and storage among them.
+
+VMs are also known as virtual servers, virtual server instances and virtual private servers.
+
+Containers are a lighter-weight, more agile way of handling virtualization—since they don’t use a hypervisor, you can enjoy faster resource provisioning and speedier availability of new applications. 
+
+Rather than spinning up an entire virtual machine, containerization packages together everything needed to run a single application or microservice (along with runtime libraries they need to run). The container includes all the code, its dependencies and even the operating system itself. This enables applications to run almost anywhere—a desktop computer, a traditional IT infrastructure or the cloud.
+
+Containers use a form of operating system (OS) virtualization. Put simply, they leverage features of the host operating system to isolate processes and control the processes’ access to CPUs, memory and desk space.
+
 Use cases for containers:
 - Microservices (loosely coupled and independently deployable services)
 - DevOps (build, ship and run software)
