@@ -62,36 +62,16 @@ Course Syllabus
 - Operators
 - Istio
 
-### Final Exam
+## Module 1
+A container is an executable unit of software. Basically, what your program needs to run packed in one place so it can be executed anywhere.
 
-## Grading Scheme
-GRADING SCHEME
+Imagine old shipping methods. Too much wasted space. Look at modern shipping methods. Neat and clean. This is the idea of containers.
+- Easy to Move
+- Light weight
+- Fast
 
-This section contains information for those earning a certificate. Those auditing the course can skip this section and click next.
-
-1. The course contains 4 Graded Quizzes (1 per module) and 1 Final Exam. Each Graded Quiz carries an equal weight totaling 50% of the final grade, and the final Exam carries a weight of 50% of the final grade.
-2. The minimum passing mark for the course is 70%.
-3. Permitted attempts are per question:
-- One attempt - For True/False questions
-- Two attempts - For any question other than True/False
-4. There are no penalties for incorrect attempts.
-5. Clicking the "Submit" button when it appears, means your submission is FINAL.  You will NOT be able to resubmit your answer for that question again.
-6. Check your grades in the course at any time by clicking on the "Progress" tab.
-
-## Copyrights and Trademarks
-IBM®, the IBM logo, and ibm.com® are trademarks or registered trademarks of International Business Machines Corporation in the United States, other countries, or both. A current list of IBM trademarks is available on the Web at “Copyright and trademark information” at: ibm.com/legal/copytrade.shtml
-
-References to IBM products or services do not imply that IBM intends to make them available in all countries in which IBM operates.
-
-Netezza®, Netezza Performance Server®, NPS® are trademarks or registered trademarks of IBM International Group B.V., an IBM Company.
-
-Linux is a registered trademark of Linus Torvalds in the United States, other countries, or both.
-
-Microsoft, Windows, Windows NT, and the Windows logo are trademarks of Microsoft Corporation in the United States, other countries, or both.
-
-Java and all Java-based trademarks and logos are trademarks or registered trademarks of Oracle and/or its affiliates.
-
-UNIX is a registered trademark of The Open Group in the United States and other countries.
-
-Other product, company or service names may be trademarks or service marks of others.
-
+Use cases for containers:
+- Microservices (loosely coupled and independently deployable services)
+- DevOps (build, ship and run software)
+- Hybird, multi-cloud (run consistently across environments)
+- Application modernizing and migration
