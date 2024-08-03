@@ -393,3 +393,21 @@ Scale existing deployment:
 How do we know it is working? Delete a POD. EZ PZ
 - kubectl get pods
 - kubectl delete pod hello-kubernetes-5655b546f8-5mflw
+
+### AutoScaling
+- ReplicaSet works with a set number of pods
+- Horizontal Pod Autoscaler (HPA) enables scaling up and down as needed
+- Can configure based on desired state of CPU, memory, etc..
+
+How to create an Autoscaler?
+- kubectl get pods
+- kubectl get rs (rs = ReplicaSet remember)
+- kubectl autoscale deploy hello-kubernetes --min=2-- max=5 --cpu-percent=10
+- min = minimum number of pods, max is maximum number of pods
+- cpu-percent is trigger to create pods, it looks at usage of cpu %
+- kubectl get pods (behind scene it scales up and down depending on CPU usage)
+- kubectl describe rs hello-kubernetes-5655b546f8
+- kubectl get hpa
+
+Otherway is to create a manually autoscale YAML file. kind: HorizontalPodAutoscaler and in spec we put maxReplicas, minReplicas, scaleTargetRef, targetCPUUtilizationPercentage
+
