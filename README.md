@@ -369,3 +369,27 @@ spec:
 - kubectl get deployment
 - We see 3/3 ready, up-to-date, available. Yep it works
 
+## Module 3 - Manage Kubernetes Applications
+
+### ReplicaSet
+- Replicate pods for redundancy ( add/delete pods as needed )
+- Maintain desired state
+- Supersede replica controller
+- It doesn't own any Pods, it uses their Labels to decide
+- An ReplicaSet is created automatically when you create a deployment. It replicates to a single POD
+
+To create one from scratch:
+- apply a YAML file with "kind" attribute set to "ReplicaSet"
+- It is recommended to create a deployment instead
+- "rs" is short form for ReplicaSet
+
+Scale existing deployment:
+- $ kubectl create -f deployment.yaml
+- $ kubectl get pods (shows created PODS)
+- $ kubectl get deploy (gets deployment)
+- kubectl scale deploy hello-kubernetes --replicas=3
+- kubectl get pods (notice we have 2 more pods now)
+
+How do we know it is working? Delete a POD. EZ PZ
+- kubectl get pods
+- kubectl delete pod hello-kubernetes-5655b546f8-5mflw
