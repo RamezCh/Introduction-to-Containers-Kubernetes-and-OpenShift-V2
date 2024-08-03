@@ -269,3 +269,10 @@ Namespaces provide a convenient way to virtualize a physical cluster. One Cluste
 
 - kube-system namespace is present to hold some of these components.
 - Default namespace can be used to hold the users applications
+- Additional namespaces can be created to keep things separated, ex namespace for teams, projects, apps and so on..
+- Namespaces provide a scope for the name of objects. Each object has a name that must be unique for that resource type within that namespace.
+
+Labels are key/value pairs that can be attached to objects in order to identify those objects. They do not have to be UNIQUE. Labels area used to keep things grouped adn organized.
+
+This is where selectors come into play. Label selectors are the core grouping primitive in Kubernetes. They enable you to identify a set of objects.
+
