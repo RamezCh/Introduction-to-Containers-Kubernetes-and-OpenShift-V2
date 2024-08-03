@@ -250,3 +250,22 @@ Controllers:
 - Track Kubernetes objects and ensure that the desired state is achieved
 
 ### Kubernetes Objects
+Objects are persistent entities in Kubernetes meaning once created Kubernetes ensures they keep existing.
+
+Example of Kubernetes Objects:
+- Pods
+- Namespaces
+- Deployments
+- Configmaps
+- Volumes
+
+To work with these objects (create, update, delete) you use Kubernetes API. The most common way to perform these actions is to use the "kubectl" command-line interface.
+
+Kubernetes Objects consist of 2 main fields, SPEC that dictates the desired state for this object. STATUS which is provided by Kubernetes to describe the current state of the object.
+
+The goal is for the desired state to match the current state.
+
+Namespaces provide a convenient way to virtualize a physical cluster. One Cluster can appear to be several distinct clusters. Very useful for cost saving purposes or maintaining multiple projects that we want segregated.
+
+- kube-system namespace is present to hold some of these components.
+- Default namespace can be used to hold the users applications
