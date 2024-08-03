@@ -349,3 +349,23 @@ They are both namespace scoped.
 Get command lists all deployments in the kube-system namespace. (Kube-system is a namespace for objects created by the Kubernetes system.
 
 Describe command shows details of a specific deployment in the kube-system namespace
+
+Lets run an example, here is nginx.yaml file:
+
+apiVersion: v1
+kind: Pod
+metadata:
+    name: nginx
+spec:
+    containers:
+    - name: nginx
+    image: nginx:1.7.9
+    ports:
+    - containerPort: 80
+
+- $ kubectl apply -f nginx.yaml
+- deployment.apps/nginx-deployment created
+- Object created, but is it running successfuly?
+- kubectl get deployment
+- We see 3/3 ready, up-to-date, available. Yep it works
+
