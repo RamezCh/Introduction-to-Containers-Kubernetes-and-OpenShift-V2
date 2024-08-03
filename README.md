@@ -411,3 +411,26 @@ How to create an Autoscaler?
 
 Otherway is to create a manually autoscale YAML file. kind: HorizontalPodAutoscaler and in spec we put maxReplicas, minReplicas, scaleTargetRef, targetCPUUtilizationPercentage
 
+### Rolling Updates
+- ReplicaSet & autoscaling are important to minimize downtime and service interruptions
+- Rolling updates are a way to roll out app changes in an automated and controlled fashion throughout your pods
+- Work with pod templates such as deployments
+- Allow for roll back if something goes wrong
+
+To Enable:
+- add liveness and readiness probes to your deployments. This ensures deployments are marked ready appropriately
+- Add rolling update strategy to your YAML file
+
+Ex of Rolling Updates:
+- kubectl get pods (3 pods found hello world)
+- index.js: var port = process.env.PORT || 8080; var message = process.env.MESSAGE || "Hello world!";
+- Update index.js: var port = process.env.PORT || 8080; var message = process.env.MESSAGE || "Hello world v2!";
+- We need to update without any downtime and allow users to access the website
+- docker build -t hello-kubernetes
+- docker tag hello-kubernetes upkar/hello-kubbernetes:2.0
+- docker push upkar/hello-kubernetes:2.0
+- kubectl get deployments
+- kubectl set image deployments/hello-kubernetes hello-kubernetes=upkar/hello-kubernetes:2.0
+- kubectl rollout status deployments/hello-kubernetes (sees if success)
+- kubectl describe pods
+- kubectl rollout undo deployments/hello-kubernetes (undo roll out)
