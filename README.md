@@ -308,3 +308,31 @@ spec:
 - replicas: number of replicas (of pods) to be running at any given time
 - pod template so we know the pods to be created by the ReplicaSet
 - selector: matchLabels: app: nginx . Labels aren't unique remember? We tell program to find app: nginx and once it does to create the replicas
+
+### Kubernetes CLI (Kubectl)
+- Key Tool for working with Kubernetes
+- Provide functionality for working with clusters and workloads running on clusters
+- Several different command types including declarative and imperative
+
+#### Imperative:
+- Quickly create, update, and delete Kubernetes objects
+- Easiest to learn
+- Doesn't provide an audit trail
+- Not very flexible
+
+Imagine you want to deploy a container with the same details of running one and there is no configuration files. You would have to guess and think hard right? Maybe call the person who ran that container. This is why we need a template.
+
+- Use Configuration template
+- Specify an operation such as create, replace, or delete
+
+#### Declarative commands:
+- Configuration files define one or more objects
+- No operation is specified (Needed operations are inferred by kubectl)
+- Works on files and directories
+- Configuration files define desired state, and Kubernetes actualizes that state
+- Preferred method for production systems
+
+We have a configuration file, shared with developers. Even if one of developers miss updating the file we can still add them to the file and it works just fine.
+
+Note: kubectl is pronounced as cube control
+
