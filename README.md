@@ -336,3 +336,16 @@ We have a configuration file, shared with developers. Even if one of developers 
 
 Note: kubectl is pronounced as cube control
 
+### Using Kubernetes
+- Apply command: kubectl apply -f file.yaml
+- It makes state of cluster match with one in the provided files
+- It is fully declarative, we don't specify steps
+- Viewing Resources:
+1. kubectl get deployments --namespace kube-system
+2. kubectl describe deployment kube-dns-amd64 --namespace kube-system
+
+They are both namespace scoped.
+
+Get command lists all deployments in the kube-system namespace. (Kube-system is a namespace for objects created by the Kubernetes system.
+
+Describe command shows details of a specific deployment in the kube-system namespace
