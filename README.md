@@ -276,3 +276,35 @@ Labels are key/value pairs that can be attached to objects in order to identify 
 
 This is where selectors come into play. Label selectors are the core grouping primitive in Kubernetes. They enable you to identify a set of objects.
 
+### Basic Kubernetes Objects
+#### POD:
+- Simplest unit in Kubernetes
+- Represents processes running in your cluster
+- Encapsulates a container or sometimes multiple
+- Replicating a Pod serves to scale an application horizontally
+
+YML FILE:
+
+apiVersion: v1
+kind: Pod
+metadata:
+    name: nginx
+spec:
+    containers:
+    - name: nginx
+    image: nginx:1.7.9
+    ports:
+    - containerPort: 80
+
+- kind field is the kind of object we want to create.
+- spec fields depends on kind of object we want to create, a pod spec must contain at least one container.
+- name is the name of container
+- image is the image of container
+- ports array lists ports to expose container
+
+#### ReplicaSet:
+- Maintains a set of identical Pods
+- kind: ReplicaSet
+- replicas: number of replicas (of pods) to be running at any given time
+- pod template so we know the pods to be created by the ReplicaSet
+- selector: matchLabels: app: nginx . Labels aren't unique remember? We tell program to find app: nginx and once it does to create the replicas
