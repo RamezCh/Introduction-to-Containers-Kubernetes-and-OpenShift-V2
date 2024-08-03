@@ -434,3 +434,5 @@ Ex of Rolling Updates:
 - kubectl rollout status deployments/hello-kubernetes (sees if success)
 - kubectl describe pods
 - kubectl rollout undo deployments/hello-kubernetes (undo roll out)
+
+### Config Maps and Secrets
