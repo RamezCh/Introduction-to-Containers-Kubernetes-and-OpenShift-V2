@@ -453,3 +453,50 @@ ConfigMaps are used to:
 
 Secrets are like ConfigMaps but meant for sensitive informations
 
+How to create ConfigMaps?
+- kubectl create configmap my-config --from-literal=MESSAGE="hello from first configmap"
+
+env:
+
+- name: MESSAGE
+- 
+  valueFROM:
+  
+    configMapKeyRef:
+  
+      name: my-config
+  
+      key: MESSAGE
+
+- We can list all configmaps using kubectl get configmaps
+- We can get details of config map using kubectl describe configmap my-config
+
+Another way to add MESSAGE var is:
+- cat my.properties
+1. MESSAGE=hello from the my.properties files
+- k create cm my-config --from-file=my.properties
+
+env:
+
+- name: MESSAGE
+
+  valueFROM:
+  
+    configMapKeyRef:
+  
+      name: my-config
+  
+      key: my.properties
+
+  Another way:
+  - kubectl get cm
+  - No resources found in default namespace.
+  - cat my-config.yaml
+  1. apiVersion: v1
+  2. data:
+  3.   my.properties:MESSAGE=hello from the my.properties file
+  4.   kind: ConfigMap
+  5.   metadata:
+  6.     name: my-config
+  7.     namespace: default
+  
