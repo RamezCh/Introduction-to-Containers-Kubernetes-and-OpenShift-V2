@@ -442,3 +442,14 @@ index.js: var port = process.env.PORT || 8080; var message = process.env.MESSAGE
 - Hard-coded values are 8080, Hello World!
 - If env.PORT r env.MESSAGE found they will overwrite the hard-coded variables
 
+ConfigMaps are used to:
+- Provide configuration for deployments
+- Reusable across deployments
+- Created in a couple different ways:
+1. Using String literals
+2. Using an existing properties of "key" = "value" file
+3. Providing a ConfigMap YAML descriptor file. Both the first an second ways can help us create such a YAML file
+- Multiple ways to reference from Pod/Deployment (ENV variable / Mount as a Volume)
+
+Secrets are like ConfigMaps but meant for sensitive informations
+
