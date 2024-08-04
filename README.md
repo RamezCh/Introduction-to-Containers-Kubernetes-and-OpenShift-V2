@@ -436,3 +436,9 @@ Ex of Rolling Updates:
 - kubectl rollout undo deployments/hello-kubernetes (undo roll out)
 
 ### Config Maps and Secrets
+As software developers, we know it's a good practice not to hard-code configuration variables in code. We keep them separate so that any changes in configuration do not require code changes.
+
+index.js: var port = process.env.PORT || 8080; var message = process.env.MESSAGE || "Hello world!";
+- Hard-coded values are 8080, Hello World!
+- If env.PORT r env.MESSAGE found they will overwrite the hard-coded variables
+
