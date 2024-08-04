@@ -516,5 +516,10 @@ Another way:
 - mountPath:"/etc/api"
 - readOnly:true
 - volumes:
-- - name:api-creds
+- -name:api-creds
 - secret: secretName:api-creds
+
+### Service Binding:
+It is how we consume external services in our applications. One way is binding those services to our deployment.
+
+Most external services have documentation telling you how to do it, they differ from one another.
