@@ -499,4 +499,22 @@ env:
   5.   metadata:
   6.     name: my-config
   7.     namespace: default
+  - kubectl apply -f my-config.yaml
+  - kubectl describe cm my-config
+  - Now it shows things we wrote in yml file
+
+  Secrets: (Similar to ConfigMaps)
+  - kubectl create secret generic api-creds --from-literal=key=mysupersecretapikey
+  - kubectl get secret
+  - kubectl describe secret api-creds
+  - now we dont see it printed in plain text
   
+Another way:
+- k create secret generic api-creds --from-literal=key=mysupersecretapikey
+- in YAML file we do volumeMounts
+- name: api-creds
+- mountPath:"/etc/api"
+- readOnly:true
+- volumes:
+- - name:api-creds
+- secret: secretName:api-creds
